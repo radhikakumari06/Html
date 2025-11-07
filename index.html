@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Hero Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    nav {
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffeb3b;
+    }
+
+    /* ---------- HERO SECTION ---------- */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .hero-container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      gap: 50px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-left {
+      flex: 1;
+      color: white;
+    }
+
+    .hero-left h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero-left p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .hero-right {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-right img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* ---------- ABOUT SECTION ---------- */
+    #about {
+      padding: 80px 20px;
+      background-color: white;
+      text-align: center;
+    }
+
+    #about h2 {
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    /* ---------- SERVICES SECTION ---------- */
+    #services {
+      padding: 80px 20px;
+      background-color: #e9ecef;
+      text-align: center;
+    }
+
+    #services h2 {
+      color: #007BFF;
+      margin-bottom: 30px;
+    }
+
+    .service-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .service-box {
+      background-color: white;
+      width: 280px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .service-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .service-box h3 {
+      margin: 15px 0 10px;
+      color: #007BFF;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-left h1 {
+        font-size: 2.2em;
+      }
+
+      .hero-left p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ---------- NAVBAR ---------- -->
+  <nav>
+    <div class="logo">MyWebsite</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+    </ul>
+  </nav>
+
+  <!-- ---------- HERO SECTION ---------- -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <!-- Left Div: Heading + Text -->
+      <div class="hero-left">
+        <h1>Hello World!</h1>
+        <p>Welcome to my website. Here we explore technology, AI, and web development
+           in a beginner-friendly style. Build beautiful websites easily!</p>
+      </div>
+
+      <!-- Right Div: Image -->
+      <div class="hero-right">
+        <img src="hello (2).png" alt="Hero Image">
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- ABOUT SECTION ---------- -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi! I'm learning web development and creating beginner-friendly websites.
+      This site uses HTML and internal CSS with a modern gradient design and responsive layout.
+    </p>
+  </section>
+
+  <!-- ---------- SERVICES SECTION ---------- -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-container">
+      <div class="service-box">
+        <img src="hello.png" alt="AI Service">
+        <h3>Artificial Intelligence</h3>
+        <p>Smart AI solutions for modern challenges and automation.</p>
+      </div>
+
+      <div class="service-box">
+        <img src="img.jpg" alt="Web Design">
+        <h3>Web Development</h3>
+        <p>Responsive and beginner-friendly web designs for everyone.</p>
+      </div>
+
+      <div class="service-box">
+        <img src="Ai service.png" alt="Data Analytics">
+        <h3>Data Analytics</h3>
+        <p>Turn data into insights for smarter decisions and better solutions.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
